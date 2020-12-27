@@ -63,3 +63,19 @@ function merge(left, right) {
 }
 
 console.log(mergeSort([55, 32, 76, 34, 89, 3, 7, 1]));
+
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
+console.log(toTitleCase("hello world how are you"));
+
+var text = "foo bar loo zoo moo";
+text = text
+  .toLowerCase()
+  .split(" ")
+  .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+  .join(" ");
+console.log(text, "text");
