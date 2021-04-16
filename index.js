@@ -79,3 +79,10 @@ text = text
   .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
   .join(" ");
 console.log(text, "text");
+
+function checkPalindrom(str) {
+  return str == str.split("").reverse().join("");
+}
+console.log(checkPalindrom("racecar"));
+
+["car", "test", "car"].sort((a, b) => (a > b) * 2 - 1);
