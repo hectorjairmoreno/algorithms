@@ -86,3 +86,29 @@ function checkPalindrom(str) {
 console.log(checkPalindrom("racecar"));
 
 ["car", "test", "car"].sort((a, b) => (a > b) * 2 - 1);
+
+function howManyRepeated(str) {
+  const result = [];
+  const strArr = str
+    .toLowerCase()
+    .split("")
+    .sort()
+    .join("")
+    .match(/(.)\1+/g);
+
+  if (strArr != null) {
+    strArr.forEach((elem) => {
+      result.push(elem[0]);
+    });
+  }
+  return result;
+}
+
+console.log(howManyRepeated("arflasfldsjflsj"));
+
+const counts = {};
+const sampleArray = [1, 1, 1, 1, 3, 4, 4, 4];
+sampleArray.forEach(function (x) {
+  counts[x] = (counts[x] || 0) + 1;
+});
+console.log(counts);
